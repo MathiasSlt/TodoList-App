@@ -1,0 +1,124 @@
+.blueTable {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.blueTable thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+.blueTable th,
+.blueTable td {
+    padding: 12px 15px;
+}
+.blueTable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.blueTable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.blueTable tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.blueTable tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+body{
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  
+}
+
+
+.buttonClass {
+  text-decoration: none;
+  padding: 8px;
+  font-size:15px;
+  font-family:Arial;
+  width:140px;
+  height:50px;
+  border-width:1px;
+  color:#fff;
+  border-color:#18ab29;
+  font-weight:bold;
+  border-top-left-radius:28px;
+  border-top-right-radius:28px;
+  border-bottom-left-radius:28px;
+  border-bottom-right-radius:28px;
+  text-shadow: 1px 1px 0px #2f6627;
+  background:#44c767;
+}
+
+.buttonClass:hover {
+  background: #5cbf2a
+}
+
+
+.removeButton {
+  text-decoration: none;
+  padding: 8px;
+  font-size:15px;
+  font-family:Arial;
+  width:140px;
+  height:50px;
+  border-width:1px;
+  color:#fff;
+  border-color:rgba(208, 2, 27, 1);
+  font-weight:bold;
+  border-top-left-radius:28px;
+  border-top-right-radius:28px;
+  border-bottom-left-radius:28px;
+  border-bottom-right-radius:28px;
+  text-shadow: 1px 1px 0px #2f6627;
+  background:rgba(208, 2, 27, 1);
+}
+
+.removeButton:hover {
+  background: rgba(208, 2, 27, 1)
+}
+  
+
+.falseButton {
+  text-decoration: none;
+  font-size:15px;
+  font-family:Arial;
+  width:100px;
+  height:25px;
+  color:#fff;
+  border-color:rgba(208, 2, 27, 1);
+  font-weight:bold;
+  border-top-left-radius:28px;
+  border-top-right-radius:28px;
+  border-bottom-left-radius:28px;
+  border-bottom-right-radius:28px;
+  text-shadow: 1px 1px 0px #2f6627;
+  background:rgba(208, 2, 27, 1);
+}
+
+.trueButton {
+  text-decoration: none;
+  font-family:Arial;
+  width:100px;
+  height:25px;
+  border-width:1px;
+  color:#fff;
+  border-color:#18ab29;
+  font-weight:bold;
+  border-top-left-radius:28px;
+  border-top-right-radius:28px;
+  border-bottom-left-radius:28px;
+  border-bottom-right-radius:28px;
+  text-shadow: 1px 1px 0px #2f6627;
+  background:#44c767;
+}
+            
