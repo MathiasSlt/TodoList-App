@@ -15,8 +15,8 @@ app.use((req, res, next) => {
 
 app.use('/api/todoList',todoListRoutes);
 
-
-app.use('/',(req,res)=>{
+app.use(express.static("../html/"));
+app.all('/',(req,res)=>{
   res.status(200).sendFile(path.resolve('../html/index.html'));
 });
 
