@@ -1,17 +1,8 @@
-const http = require('http'),
-  https = require ('https'),
-  app = require('./app'),
-  fs = require('fs');
-
-/*const options ={
-  key: fs.readFileSync('ssl/privatekey.key'),
-  passphrase:process.env.SSL_PARAPHRASE,
-  cert: fs.readFileSync('ssl/certificate.crt')
-};*/
-
+const https = require('http'),
+	app = require('./app'),
+	fs=require('fs');
 
 const normalizePort = val => {
-  
   const port = parseInt(val, 10);
   if (isNaN(port)) {
     return val;
@@ -23,6 +14,7 @@ const normalizePort = val => {
 };
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
 
 const errorHandler = error => {
   if (error.syscall !== 'listen') {
@@ -44,8 +36,14 @@ const errorHandler = error => {
   }
 };
 
+/*const options ={
+  key: fs.readFileSync('ssl/key.pem'),
+  passphrase:"Mathiasdu71",
+  cert: fs.readFileSync('ssl/cert.pem')
+};*/
 
-const server = http.createServer(app);
+const server = https.createServer(app);
+
 server.on('error', errorHandler);
 server.on('listening', () => {
   const address = server.address();

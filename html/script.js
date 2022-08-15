@@ -1,4 +1,6 @@
-var urlApp = "http://localhost:3000/api/todoList";
+var url = window.location.href;
+var urlApp = url+"api/todoList";
+console.log(urlApp);
 function ajouterElement()
 {
     let bodyRequest={
@@ -46,11 +48,11 @@ function refreshList()
                     cellDesc.innerText=jsonRes[j].desc;
                     if(jsonRes[j].fini==false)
                     {
-                        cellFini.innerHTML="Non fini";
+                        cellFini.innerHTML="Not validate";
                         cellFini.style="color:#7D0F27;font-weight: bold;";
                     }
                     else{
-                        cellFini.innerHTML="Fini";  
+                        cellFini.innerHTML="Validate";  
                         cellFini.style="color:#43B817;font-weight: bold;";
                     } 
                     //cellFini.innerHTML=jsonRes[j].fini;
@@ -112,7 +114,7 @@ function changEtatTask()
             if(checkBoxsActive[i].checked==true)
             {
                 let value;
-                if(parent.previousSibling.textContent=="Non fini")
+                if(parent.previousSibling.textContent=="Not validate")
                 {
                     value="true";
                 }
