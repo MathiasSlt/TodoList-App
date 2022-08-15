@@ -7,7 +7,10 @@ const thingSchema = mongoose.Schema({
   desc: { type: String, required: true },
   fini: {type: Boolean, required:true}
 });
-mongoose.connect("mongodb+srv://"+process.env.DB_USER+":"+process.env.DB_PASSWORD+"@"+process.env.DB_HOST+"/?retryWrites=true&w=majority",
+const user=process.env.DB_USER;
+const pass=process.env.DB_PASSWORD;
+const host=process.env.DB_HOST;
+mongoose.connect("mongodb+srv://"+user+":"+pass+"@"+host+"/?retryWrites=true&w=majority",
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
